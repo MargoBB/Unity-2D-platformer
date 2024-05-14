@@ -9,4 +9,4 @@
 * Unity
 * Visual Studio
 ## Опублікований продукт
-Інсталяційний пакет створеної гри можна завантажити з...
+Інсталяційний пакет створеної гри можна завантажити з магазину itch.io: [TheLittlePrince(MobileVersion)](https://margobb.itch.io/thelittleprincemob).
