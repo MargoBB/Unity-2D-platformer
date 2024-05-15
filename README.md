@@ -10,3 +10,4 @@
 * Visual Studio
 ## Опублікований продукт
 Інсталяційний пакет створеної гри можна завантажити з магазину itch.io: [TheLittlePrince(MobileVersion)](https://margobb.itch.io/thelittleprincemob).
+Інсталяційний пакет створеної гри можна завантажити з магазину itch.io: [TheLittlePrince(PCVersion)](https://zheka2025.itch.io/the-little-prince-pc).
