@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour
         touchingDirections = GetComponent<TouchingDirections>();
         damageable = GetComponent<Damageable>();
 
-        // Додаємо слухачі для натискання та відпускання кнопок
+
         AddButtonListeners(leftButton, () => moveLeft = true, () => moveLeft = false);
         AddButtonListeners(rightButton, () => moveRight = true, () => moveRight = false);
         jumpButton.onClick.AddListener(Jump);
@@ -191,7 +191,6 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
     }
 
-    // Додаємо метод для додавання слухачів до кнопок
     private void AddButtonListeners(Button button, Action onPointerDown, Action onPointerUp)
     {
         EventTrigger trigger = button.gameObject.GetComponent<EventTrigger>() ?? button.gameObject.AddComponent<EventTrigger>();

@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayMenu : MonoBehaviour
+public class Copyright : MonoBehaviour
 {
-    // Update is called once per frame
     public void OpenLevelList()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(5);
+    }
+
+    public void OpenMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

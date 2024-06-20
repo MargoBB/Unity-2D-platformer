@@ -29,11 +29,12 @@ public class HealthText : MonoBehaviour
 
         timeElapsed += Time.deltaTime;
 
-        if(timeElapsed < timeToFade)
+        if (timeElapsed < timeToFade)
         {
             float fadeAlpha = startColor.a * (1 - (timeElapsed / timeToFade));
             textMeshPro.color = new Color(startColor.r, startColor.g, startColor.b, fadeAlpha);
-        } else
+        }
+        else
         {
             Destroy(gameObject);
         }

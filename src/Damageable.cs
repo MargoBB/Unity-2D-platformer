@@ -41,7 +41,7 @@ public class Damageable : MonoBehaviour
             healthChanged?.Invoke(_health, MaxHealth);
 
             // If health drops below 0, character is no longer alive
-            if(_health <= 0)
+            if (_health <= 0)
             {
                 IsAlive = false;
             }
@@ -57,7 +57,8 @@ public class Damageable : MonoBehaviour
     private float timeSinceHit = 0;
     public float invincibilityTime = 0.25f;
 
-    public bool IsAlive {
+    public bool IsAlive
+    {
         get
         {
             return _isAlive;
@@ -68,7 +69,7 @@ public class Damageable : MonoBehaviour
             animator.SetBool(AnimationStrings.isAlive, value);
             Debug.Log("IsAlive set " + value);
 
-            if(value == false)
+            if (value == false)
             {
                 damageableDeath.Invoke();
             }
@@ -96,9 +97,9 @@ public class Damageable : MonoBehaviour
 
     private void Update()
     {
-        if(isInvincible)
+        if (isInvincible)
         {
-            if(timeSinceHit > invincibilityTime)
+            if (timeSinceHit > invincibilityTime)
             {
                 // Remove invincibility
                 isInvincible = false;
@@ -112,7 +113,7 @@ public class Damageable : MonoBehaviour
     // Returns whether the damageable took damage or not
     public bool Hit(int damage, Vector2 knockback)
     {
-        if(IsAlive && !isInvincible)
+        if (IsAlive && !isInvincible)
         {
             Health -= damage;
             isInvincible = true;
@@ -133,7 +134,7 @@ public class Damageable : MonoBehaviour
     // Returns whether the character was healed or not
     public bool Heal(int healthRestore)
     {
-        if(IsAlive && Health < MaxHealth)
+        if (IsAlive && Health < MaxHealth)
         {
             int maxHeal = Mathf.Max(MaxHealth - Health, 0);
             int actualHeal = Mathf.Min(maxHeal, healthRestore);
